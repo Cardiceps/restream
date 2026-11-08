@@ -1,0 +1,15 @@
+[package]
+name = "restream"
+version = "2.0.0"
+edition = "2021"
+rust-version = "1.66"
+description = "RTMP relay with fallback to Twitch/Kick, driven by RTMP end-of-publish commands"
+license = "MIT"
+
+# Зависимостей нет вообще: сборка не требует сети и ничего не тянет из crates.io.
+[dependencies]
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
